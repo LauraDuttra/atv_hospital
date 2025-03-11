@@ -1,0 +1,175 @@
+/* Definindo as cores principais */
+:root {
+    --azul: #007bff;
+    --branco: #ffffff;
+    --verde: #28a745;
+  }
+  
+  /* Resetando margens e preenchimentos */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo para o corpo da página */
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--branco);
+    color: #333;
+    padding: 20px;
+    background-image: linear-gradient(to bottom, #f1f8ff, #e0f7fa);
+    min-height: 100vh;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  /* Estilo para o título principal */
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 4em;
+    font-weight: 700;
+    background: linear-gradient(90deg, #007bff, #00d1ff);
+    background-clip: text;
+    color: transparent;  /* Faz com que o texto use o gradiente */
+    padding: 20px;
+    animation: titleEffect 2s ease-in-out;
+  }
+  
+  /* Estilo para o subtítulo */
+  h2 {
+    text-align: center;
+    color: var(--verde);
+    margin-top: 20px;
+    font-size: 1.8em;
+    margin-bottom: 30px;
+    font-weight: 300;
+  }
+  
+  /* Layout dos resultados */
+  .resultados {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding-top: 30px;
+  }
+  
+  /* Estilo para cada item */
+  .resultado-item {
+    background-color: var(--branco);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid var(--azul);
+    position: relative;
+  }
+  
+  .resultado-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  .resultado-item h3 {
+    color: var(--azul);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .resultado-item p {
+    color: #495057;
+    font-size: 1.1em;
+    line-height: 1.4;
+  }
+  
+  /* Emojis */
+  .emoji {
+    font-size: 3em;
+    margin-bottom: 10px;
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    color: var(--azul);
+    font-size: 1.2em;
+  }
+  
+  /* Animação de fade-in para as falas */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Animação do título com efeito de "fade-in" e "pulsar" */
+  @keyframes titleEffect {
+    0% {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    50% {
+      transform: translateY(10px);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Botão interativo */
+  .btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: var(--verde);
+    color: var(--branco);
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    margin: 20px 0;
+  }
+  
+  .btn:hover {
+    background-color: var(--azul);
+  }
+  
+  .btn:active {
+    transform: scale(0.95);
+  }
+  
+  /* Section para vídeo */
+  .video-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 50px;
+    padding: 20px;
+  }
+  
+  /* Estilizando o iframe do vídeo */
+  .video-section iframe {
+    width: 75%; /* Aumentando o tamanho do vídeo */
+    height: 500px; /* Aumentando a altura do vídeo */
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .video-section iframe {
+      width: 100%;
+      height: 250px;
+    }
+  }
+  
